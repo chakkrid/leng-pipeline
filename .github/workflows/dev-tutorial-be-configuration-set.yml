@@ -4,12 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
-
   set-configuration:
     name: set appservice configuration
     runs-on: [ self-hosted, tutorial-be-dev, vm-lengSelfHost-az-asse-sbx-001 ]
     environment: dev
-
     steps:
     - name: Login via Azure CLI
       run: |
@@ -38,3 +36,4 @@ jobs:
               "slotSetting": false
             }
           ]
+          
